@@ -48,12 +48,31 @@ const findPostById = id => new Promise ((resolve, reject) => {
 
 })
 
-findPostById(1)
-    .then((post) => {
-            console.log(post)
-    })     
+// findPostById(1)
+//     .then((post) => {
+//             console.log(post)
+//     })     
 
-    .catch(e => console.log(e))
+//     .catch(e => console.log(e))
+
+const buscar = async () => {
+   
+    try {
+        const resPosts = await Promise.all([findPostById(1),findPostById(4)])
+        console.log(resPosts)
+        // cuando se usa el promise all es porque hay mas de uno, si hay uno que no cumple la condicion no se ejecuta y salta de una vez al error es decir al catch.
+        // const post = await findPostById (id)
+        // console.log(post)
+    } catch (error) {
+        console.log(error)
+    } finally {
+        console.log('se ejecuta si o si')
+        
+    }
+}
+
+
+buscar (4)
 
 // findPostById(1,(err, post)=>{
 //     if (err) return console.log(err);
