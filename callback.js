@@ -18,3 +18,43 @@ const posts = [
         body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
     },
 ];
+
+const findPostById = (id, callback) => {
+
+    const post = posts.find (item => item.id === id)
+
+    if(post){
+        callback (null, post)
+    }else {
+        // en el error
+        callback ("no se encontro el post con id " + id )
+    }
+
+    
+
+}
+
+findPostById(1,(err, post)=>{
+    if (err) return console.log(err);
+
+    console.log(post)
+
+    findPostById(2,(err, post)=>{
+        if (err) return console.log(err);
+    
+        console.log(post)
+
+        findPostById(3,(err, post)=>{
+            if (err) return console.log(err);
+        
+            console.log(post)
+
+            findPostById(4,(err, post)=>{
+                if (err) return console.log(err);
+            
+                console.log(post)
+
+            })     
+        })          
+    })
+})
