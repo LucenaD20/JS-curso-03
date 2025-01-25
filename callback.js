@@ -19,20 +19,28 @@ const posts = [
     },
 ];
 
-const findPostById = (id) => {
+// const findPostById = (id) => {
 
-    const post = posts.find (item => item.id === id)
+//     const post = posts.find (item => item.id === id)
 
-    return new Promise ((resolve, reject) => {
+//     return new Promise ((resolve, reject) => {
 
-        if (post){
-            resolve(post)  
-        }else {
-            reject("no se encontro id" + id)
-        } 
-    })
+//         if (post){
+//             resolve(post)  
+//         }else {
+//             reject("no se encontro id" + id)
+//         } 
+//     })
     
-}
+// }
+const findPostById = id => new Promise ((resolve, reject) => {
+    const post = posts.find((item)=> item.id === id)
+                if (post){
+                    resolve(post)  
+                }else {
+                    reject("no se encontro id" + id)
+                } 
+})
 
 findPostById(4)
     .then(post => console.log(post))
