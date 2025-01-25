@@ -34,16 +34,25 @@ const posts = [
     
 // }
 const findPostById = id => new Promise ((resolve, reject) => {
-    const post = posts.find((item)=> item.id === id)
-                if (post){
-                    resolve(post)  
-                }else {
-                    reject("no se encontro id" + id)
-                } 
+
+    setTimeout(()=> {
+        
+        const post = posts.find((item)=> item.id === id)
+                    if (post){
+                        resolve(post)  
+                    }else {
+                        reject("no se encontro id" + id)
+                    } 
+    }, 2000)
+
+
 })
 
-findPostById(4)
-    .then(post => console.log(post))
+findPostById(1)
+    .then((post) => {
+            console.log(post)
+    })     
+
     .catch(e => console.log(e))
 
 // findPostById(1,(err, post)=>{
