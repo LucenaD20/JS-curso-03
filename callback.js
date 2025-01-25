@@ -19,42 +19,46 @@ const posts = [
     },
 ];
 
-const findPostById = (id, callback) => {
+const findPostById = (id) => {
 
     const post = posts.find (item => item.id === id)
 
-    if(post){
-        callback (null, post)
-    }else {
-        // en el error
-        callback ("no se encontro el post con id " + id )
-    }
+    return new Promise ((resolve, reject) => {
 
+        if (post){
+            resolve(post)  
+        }else {
+            reject("no se encontro id" + id)
+        } 
+    })
     
-
 }
 
-findPostById(1,(err, post)=>{
-    if (err) return console.log(err);
+findPostById(4)
+    .then(post => console.log(post))
+    .catch(e => console.log(e))
 
-    console.log(post)
+// findPostById(1,(err, post)=>{
+//     if (err) return console.log(err);
 
-    findPostById(2,(err, post)=>{
-        if (err) return console.log(err);
+//     console.log(post)
+
+//     findPostById(2,(err, post)=>{
+//         if (err) return console.log(err);
     
-        console.log(post)
+//         console.log(post)
 
-        findPostById(3,(err, post)=>{
-            if (err) return console.log(err);
+//         findPostById(3,(err, post)=>{
+//             if (err) return console.log(err);
         
-            console.log(post)
+//             console.log(post)
 
-            findPostById(4,(err, post)=>{
-                if (err) return console.log(err);
+//             findPostById(4,(err, post)=>{
+//                 if (err) return console.log(err);
             
-                console.log(post)
+//                 console.log(post)
 
-            })     
-        })          
-    })
-})
+//             })     
+//         })          
+//     })
+// })
