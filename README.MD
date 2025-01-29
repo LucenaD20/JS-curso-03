@@ -30,7 +30,11 @@ Proporciona una interfaz para recuperar recursos o traerlos de la pagina de inte
 // Javascript es un lenguaje basado en prototipos
 // Usamos objetos para modelar cosas del mundo real 
 
-## JS
+## Constructoras y Getter y Setter and Class
 
 // Para hacer plantillas de javascript utilizamos funciones especiales llamadas constructoras.
-// Cuando se crea una nueva instancia 
+// Cuando se crea una nueva instancia del objeto a partir de una funcion constructora.
+// Los prototipos son un mecanismo mediante el cual los objetos en JavaScript heredan características entre sí.
+// Los metodos se agregaron fuera de la seccion constructora con la cadena de prototipos podemos acceder si lo llamamos (por ejemplo una persona que tiene solo un nombre no necesita llamar el segundo sino existe.)
+// el Static es para mantener algo estatico de la class
+// el extends se usa para heredar de una clase.
