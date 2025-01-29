@@ -23,3 +23,14 @@ Proporciona una interfaz para recuperar recursos o traerlos de la pagina de inte
 // Proporciona una interfaz JavaScript para hacer peticiones a HTTP asi como sus respuestas.
 // Inicia el proceso de obtener un recurso de la red, devolvuendo una promesa que se cumple una vez la respuesta esta disponible.
 // JSON (JavaScript Object Notation), es un formato basado en texto estandar para representar datos estructurados en la sintaxis de objetos de JavaScript. Es comunmente utilizado para transmitir datos en aplicaciones web.
+
+## POO
+
+// Programacion orientada a objetos.
+// Javascript es un lenguaje basado en prototipos
+// Usamos objetos para modelar cosas del mundo real 
+
+## JS
+
+// Para hacer plantillas de javascript utilizamos funciones especiales llamadas constructoras.
+// Cuando se crea una nueva instancia 
